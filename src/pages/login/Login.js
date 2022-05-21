@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import { Link } from 'react-router-dom';
 const Login = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
     const onSubmit = data =>{
@@ -64,10 +65,11 @@ const Login = () => {
 
                             </label>
                         </div>
-                        <input className='btn w-full max-w-xs' type="submit" value="Login" />
+                        <input className='btn btn-primary w-full max-w-xs' type="submit" value="Login" />
                         
                     </form>
-                    <div className="divider">OR</div>
+                    <p><small>new to car sporte?<Link to={'/signup'} className='text-primary'>create account</Link></small></p>
+                    <div className="divider"><small>OR</small></div>
                         <button className='btn btn-outline btn-success'>Continue with Google</button>
                 </div>
             </div>
